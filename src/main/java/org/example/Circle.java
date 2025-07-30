@@ -42,8 +42,10 @@ public class Circle implements Geometry {
     @Override
     public void resize(double factor) {
 
-        factor = Math.abs(factor);
-        radius *= factor;
+        if (validateThis()) {
+            factor = Math.abs(factor);
+            radius *= factor;
+        }
 
     }
 

@@ -52,15 +52,17 @@ public class Rectangle implements Geometry {
     @Override
     public void resize(double factor) {
 
-        factor = Math.abs(factor);
-        w *= factor;
-        h *= factor;
+        if (validateThis()) {
+            factor = Math.abs(factor);
+            w *= factor;
+            h *= factor;
+        }
 
     }
 
     @Override
     public String getInfo() {
-        return "Квадрат: ширина = " + w + ", высота = " + h + ", площадь = " + calculateArea();
+        return "Прямоугольник: ширина = " + w + ", высота = " + h + ", площадь = " + calculateArea();
     }
 
     @Override

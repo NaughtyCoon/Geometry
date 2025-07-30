@@ -65,10 +65,12 @@ public class Triangle implements Geometry {
     @Override
     public void resize(double factor) {
 
-        factor = Math.abs(factor);
-        a *= factor;
-        b *= factor;
-        c *= factor;
+        if (validateThis()) {
+            factor = Math.abs(factor);
+            a *= factor;
+            b *= factor;
+            c *= factor;
+        }
 
     }
 

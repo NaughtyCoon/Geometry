@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
 
         Draw draw = new Draw();
-        Circle circle = draw.create(12);
+        Geometry circle = draw.create(12);
         Geometry rectangle = draw.create(20, 30);
-        Triangle triangle = draw.create(5, 4, 3);
+        Geometry triangle = draw.create(5, 4, 3);
 
         System.out.println(circle.getClass());
         System.out.println(rectangle.getClass());
